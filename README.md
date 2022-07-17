@@ -2,7 +2,7 @@
 
 ## Overview
 
-To predict future consumer's sentimental from customer's previous reviews.
+This analysis is analyze customer's previous reviews and then to predict future consumer's sentimental.
 
 ### Purpose
 Is it possible to analyze customer's sentiment using **Neural Network** and **Natural Language Processing** techiniques, so the company can provide appropriate actions to improve customer's satisfications?
@@ -63,15 +63,14 @@ Overall, Functional API Model achieves a better performance, which should be use
 * Loss Function: **Categorical Cross-entropy** (Results in igher accuracy than Binary Cross-entropy.)
 * Optimizer: **Adam** (Handles noise and reduces overfitting to improve the model performance.)
 
-I used early stopping criteria to stop the model from overfitting the training data. The model
-might stop training once the accuracy does not increase. Additionally, the model might train for
-lesser epochs with a lower number of patience, this can result in a low accuracy score.
+In addition, I used early stopping criteria to avoid the model from overfitting. The model might stop training once the accuracy does not increase.
 
-While I used the early stopping criteria, the model gets trained and stops as soon as the
-validation accuracy does not improve. The maximum epochs of my model are 40, but it stopped
-at 25 epochs since metrics were not improved anymore. Instead of spending time looking over
-the list and trying to find the best epoch, I would know the final training epoch contains the best
-result.
+![Screen Shot 2022-07-17 at 3 25 01 PM](https://user-images.githubusercontent.com/88747464/179421712-01ef78f8-18be-4cc1-b0b4-0dde50100078.png)
+
+The maximum epochs of my model are 40, but it stopped training at 26 epochs since metrics were not improved anymore. 
+
+Instead of spending time looking over the list and trying to find the best epoch, I would know the final training epoch contains the best
+result. However, the model might train for lesser epochs with a lower number of patience, this can result in a low accuracy score.
 
 
 
