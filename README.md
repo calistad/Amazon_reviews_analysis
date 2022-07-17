@@ -2,10 +2,10 @@
 
 ## Overview
 
-This analysis is analyze customer's previous reviews and then to predict future consumer's sentimental.
+This project is to analyze customers' previous reviews and then predict future consumers' sentiments.
 
 ### Purpose
-Is it possible to analyze customer's sentiment using **Neural Network** and **Natural Language Processing** techiniques, so the company can provide appropriate actions to improve customer's satisfications?
+Is it possible to analyze customer sentiment using **Neural Network** and **Natural Language Processing** techniques, so the company can provide appropriate actions to improve customer satisfaction?
 
 ## Results
 
@@ -56,21 +56,26 @@ The ROC-AUC score is 0.82.
 
 ## Summary
 
-Overall, Functional API Model achieves a better performance, which should be use for future analysis.
+Overall, the Functional API Model achieves a better performance, which should be used for future analysis.
 
-* Dense hidden layers: **Rectified Linear Activation (ReLu) Function** (Results in igher accuracy than Sigmoid Function.)
+* Dense hidden layers: **Rectified Linear Activation (ReLu) Function** (Results in higher accuracy than Sigmoid Function.)
 * Dense output layer: **SoftMax Function**
-* Loss Function: **Categorical Cross-entropy** (Results in igher accuracy than Binary Cross-entropy.)
+* Loss Function: **Categorical Cross-entropy** (Results in higher accuracy than Binary Cross-entropy.)
 * Optimizer: **Adam** (Handles noise and reduces overfitting to improve the model performance.)
 
 In addition, I used early stopping criteria to avoid the model from overfitting. The model might stop training once the accuracy does not increase.
-
-![Screen Shot 2022-07-17 at 3 25 01 PM](https://user-images.githubusercontent.com/88747464/179421712-01ef78f8-18be-4cc1-b0b4-0dde50100078.png)
-
 The maximum epochs of my model are 40, but it stopped training at 26 epochs since metrics were not improved anymore. 
+
+![Screen Shot 2022-07-17 at 3 25 01 PM](https://user-images.githubusercontent.com/88747464/179422365-dc63a1c6-7264-4bb6-ba3b-46389461d343.png)
 
 Instead of spending time looking over the list and trying to find the best epoch, I would know the final training epoch contains the best
 result. However, the model might train for lesser epochs with a lower number of patience, this can result in a low accuracy score.
+
+If the company wants to predict future consumer sentiment, they are recommended to use Natural Language Processing and Neural Networks. They may further use another model for cross-validation to achieve high accuracy results.
+
+## Resources
+
+UCI Machine Learning Repository: Sentiment Labelled Sentences Data Set. (2015). UCI Machine Learning Repository. https://archive.ics.uci.edu/ml/datasets/Sentiment+Labelled+Sentences
 
 
 
