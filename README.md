@@ -46,6 +46,32 @@ The ROC-AUC score is 0.52.
 ![Screen Shot 2022-07-17 at 3 06 18 PM](https://user-images.githubusercontent.com/88747464/179421070-b942c25c-ec80-4ca1-97c5-5a3de714270c.png)
 ![Screen Shot 2022-07-17 at 3 06 26 PM](https://user-images.githubusercontent.com/88747464/179421073-81b34a76-6aef-4583-a0e1-3478df7b40b2.png)
 
+| | Accuracy | Loss |
+| --- | --- | --- |
+| Training | 97% | 0.12 |
+| Validation | 79% | 0.42 |
+| Testing | 74% | 0.56 |
+
+The ROC-AUC score is 0.82.
+
+## Summary
+
+Overall, Functional API Model achieves a better performance, which should be use for future analysis.
+
+* Dense hidden layers: **Rectified Linear Activation (ReLu) Function** (Results in igher accuracy than Sigmoid Function.)
+* Dense output layer: **SoftMax Function**
+* Loss Function: **Categorical Cross-entropy** (Results in igher accuracy than Binary Cross-entropy.)
+* Optimizer: **Adam** (Handles noise and reduces overfitting to improve the model performance.)
+
+I used early stopping criteria to stop the model from overfitting the training data. The model
+might stop training once the accuracy does not increase. Additionally, the model might train for
+lesser epochs with a lower number of patience, this can result in a low accuracy score.
+
+While I used the early stopping criteria, the model gets trained and stops as soon as the
+validation accuracy does not improve. The maximum epochs of my model are 40, but it stopped
+at 25 epochs since metrics were not improved anymore. Instead of spending time looking over
+the list and trying to find the best epoch, I would know the final training epoch contains the best
+result.
 
 
 
